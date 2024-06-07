@@ -8,5 +8,5 @@ alert('Привет, ' + user + '!');
 //Запросите у пользователя число. Затем запросите степень, в которую нужно возвести это число. Выведите в консоль результат.
 
 let number = prompt('Введите число');
-let result = prompt('Возведите число ' + number + ' в квадрат');
-console.log(result);
+let number2 = prompt('Введите степень');
+console.log(number ** number2);
