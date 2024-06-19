@@ -37,12 +37,7 @@ for (let property in engineers){
 
 // Не получается, как каждый второй элемент выводить?
 
-const names = ["Jack", "Alex", "Emily", "Ben", "Alisa"{}
-    for (let i = 0; i < names.length; i = ++){
-    if (names[i] % 2){
-      console.log());      
-}
-
+const names = ["Jack", "Alex", "Emily", "Ben", "Alisa"];
 
 
 
@@ -125,15 +120,16 @@ for (let i = 0; i < numbers.length; i++){
 console.log(sum);
 
 
-// 3 - не получается, как посчитать и вывести в консоль сумму только чётных чисел в массиве?
-/*let honest = numbers[0];
+// 3
+let sumEven = 0;
 
 for (let i = 0; i < numbers.length; i++){
-    if(honest % 2){
-        honest = numbers[i];
+    if (numbers[i] % 2 === 0) {
+        sumEven = sumEven + numbers[i];
     }
 }
-console.log(honest);*/                
+
+console.log(sumEven);
                                  
 
 // 4    
@@ -147,8 +143,16 @@ for (let i = 0; i < numbers.length; i++){
 console.log(max);
 
 
-// 5 - не получается, как определить и вывести в консоль индекс максимального числа массива?
+// 5 - я не уверен, что это правильно т.к. нужно выводить индексы двух цифр 70, а у меня только первой выводится
+let maxIndex = 0;
 
+for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] > max){
+        maxIndex = i;
+    }
+}
+
+console.log(maxIndex);
 
 
 /* Задание 7
@@ -214,6 +218,20 @@ for (let i = 0; i < users.length; i++){
 2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"
 */
 
-// Не получается
-
+// 1
 let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
+
+let vegetablesNew = [];
+
+for (let i = 0; i < vegetables.length; i++){
+    vegetablesNew.push({word: vegetables [i], length: vegetables[i].length});
+}
+
+console.log(vegetablesNew);
+
+// 2
+for (let i = 0; i < vegetablesNew.length; i++){
+    console.log(vegetablesNew[i].word + ' - ' + vegetablesNew[i].length);
+}
+
+console.log(vegetablesNew);
