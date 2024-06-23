@@ -107,3 +107,26 @@ function valueInQuantity(meaning, quantity){
     return result;
 }
 console.log(valueInQuantity('Kirill', 3));
+
+
+
+/* Задание 6
+Определите массив, например let arr = [5, 4, 3, 8, 0].
+Создайте функцию filterFor(arr, a). Функция должна вернуть новый массив из элементов arr, но в нем должны содержаться элементы, которые больше или равны (>=) значению переменной a.
+Например, запуск функции filterFor(arr, 5) дает результат [5,8]
+а запуск функции filterFor(arr, 10) дает результат []
+а запуск функции filterFor(arr, 3.11) дает результат [4,5,8]
+*/
+
+let arr = [5, 4, 3, 8, 0];
+
+function filterFor(array, a){
+    const newArr = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] >= a){
+            newArr.push(array[i]);
+        }
+    }
+    return newArr;
+}
+console.log(filterFor(arr, 0));
