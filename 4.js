@@ -130,3 +130,86 @@ function filterFor(array, a){
     return newArr;
 }
 console.log(filterFor(arr, 0));
+
+
+
+/* Задание 7
+Написать функцию получения случайного цвета. Это будет строка вида "rgb(10,55,250)"
+Здесь у вас будет две функции: одна ваша - с названием getRandomRGB, а вторая - функция получения случайного числа в диапазоне min - max. 
+Вот эта функция (просто скопируйте, она уже готова):
+    function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+    }
+*/
+
+// Не получается -->
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function getRandomRGB(){
+    let r = getRandomInteger(0, 255);
+    let g = getRandomInteger(0, 255);
+    let b = getRandomInteger(0, 255);    
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+console.log(getRandomRGB());
+
+
+
+/* Задание 8
+Написать функцию, которая выводит в консоль квадраты чисел из заданного диапазона (от min до max), где значения min и max передаются в функцию как параметры.
+Примеры вызова такой функции:
+getSquares(0, 100) - выведет квадраты чисел от 0 до 100
+getSquares(56, 87) - выведет квадраты чисел от 56 до 87
+*/
+
+
+function getSquares (min, max){
+    for (let i = min; i <= max; i++){
+        console.log(i * i);
+    }
+}
+
+console.log(getSquares(0, 100));
+console.log(getSquares(56, 87));
+
+
+
+/* Задание 9
+Написать функцию isInteger(x), которая определяет, является ли число целым, и возвращает true либо false.
+Для проверки, целое ли число, вам понадобится опеатор % (подумайте, остаток от деления на какое число подойдет для вашей цели)
+*/
+
+function isInteger (x){
+    return x % 1 === 0;
+}
+
+console.log(isInteger(7));
+
+
+
+/* Задание 10
+Написать функцию, которая принимает целое число n.   
+Внутри функции запустить цикл от 1 до n с шагом 0.5. На каждой итерации цикла выводить в консоль текущее число (i) и информацию о том, целое ли оно.
+Пример, при запуске функции с параметром 3:
+"1 integer"
+"1.5 decimal"
+"2 integer"
+"2.5 decimal"
+*/
+
+function integerOrDecimal (n){
+    for (let i = 1; i < n; i = i + 0.5){
+        if (i % 1 === 0){
+            console.log(i + ' integer');
+        } else{
+            console.log(i + ' decimal');
+        }
+    }
+}
+
+console.log(integerOrDecimal(5));
