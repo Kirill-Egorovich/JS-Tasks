@@ -77,3 +77,48 @@ let guessNumber = (number) => {
 };
 
 console.log(guessNumber(3));
+
+
+
+/* Задание 4
+Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива - forEach или map. 
+*/
+
+const arr = ['Apple', 'Banana', 'Cherry'];
+
+const copyArr = arr.map(item => item);
+
+console.log(copyArr);
+
+
+
+/* Задание 5
+Создайте функцию sumObjectValues, которая будет суммировать все значения свойств, которые являются числами. Сумму чисел необходимо вернуть из функции.
+Проверить работу функции можно на объекте:
+const objectWithNumbers = {
+  a: 10,
+  b: 20,
+  c: 'string',
+  d: 12,
+} 
+*/
+
+const objectWithNumbers = {
+    a: 10,
+    b: 20,
+    c: 'string',
+    d: 12,
+}
+
+function sumObjectValues(value){
+    let summa = 0;
+    for (let item in value){
+        if (typeof value[item] === 'number'){
+            summa += value[item];
+        }
+    }
+
+    return summa;
+}
+
+console.log(sumObjectValues(objectWithNumbers));
