@@ -39,6 +39,10 @@ for (let property in engineers){
 
 const names = ["Jack", "Alex", "Emily", "Ben", "Alisa"];
 
+for (let i = 0; i < names.length; i += 2) {
+    console.log(names[i]);
+}
+
 
 
 /* Задание 4
