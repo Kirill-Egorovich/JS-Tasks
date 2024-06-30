@@ -142,8 +142,6 @@ console.log(filterFor(arr, 0));
     }
 */
 
-// Не получается -->
-
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
