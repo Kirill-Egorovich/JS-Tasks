@@ -154,3 +154,54 @@ function verifyCats(catsJane, catsJulia){
 
 console.log(verifyCats(catsJane1, catsJulia1));
 console.log(verifyCats(catsJane2, catsJulia2));
+
+
+
+/* Задание 8
+Определить массив, например let arr = [5, 4, 3, 8, 0];
+Создать функцию filterFor(arr, a). Функция должна вернуть новый массив из элементов arr, но в нем должны содержаться элементы, которые больше или равны (>=) значения переменной a.
+Например, запуск функции filterFor(arr, 5) дает результат [5,8]
+запуск функции filterFor(arr, 10) дает результат []
+запуск функции filterFor(arr, 3.11) дает результат [4,5,8]
+*/
+
+let arr = [5, 4, 3, 8, 0];
+
+function filterFor(arr,a){
+    const newArr = arr.filter(item => item >= a)
+
+    return newArr;
+}
+
+console.log(filterFor(arr, 5));
+console.log(filterFor(arr, 10));
+console.log(filterFor(arr, 3.11));
+
+
+
+/* Задание 9
+Описать функцию, которая принимает массив строк и возвращает массив, содержащий только строки более 3-х символов. 
+Проверить работу функции на примере:  ['yes', 'hello', 'no', 'easycode', 'what'].
+*/
+
+let words = ['yes', 'hello', 'no', 'easycode', 'what'];
+
+function filterForWords(arr){
+    const newWords = arr.filter(item => item.length > 3)
+
+    return newWords;
+}
+
+console.log(filterForWords(words));
+
+
+
+/* Задание 10
+Отсортируйте массив массивов так, чтобы вначале располагались наименьшие массивы (размер массива определяется его длиной): [ [14, 45], [1], ['a', 'c', 'd'] ] → [ [1], [14, 45], ['a', 'c', 'd'] ] 
+*/
+
+const arrs = [ [14, 45], [1], ['a', 'c', 'd'] ];
+
+const sortedArrs = arrs.sort((a, b) => a.length - b.length);
+
+console.log(sortedArrs);
