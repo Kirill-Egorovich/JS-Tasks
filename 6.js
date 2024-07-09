@@ -24,7 +24,7 @@ function checkSpam(str) {
 
 console.log(checkSpam('This is a badword'));
 console.log(checkSpam('This is a XXX'));
-console.log(checkSpam('Hi, my name is Marry Jane'));
+console.log(checkSpam('Hi, my name is Mary Jane'));
 
 
 
