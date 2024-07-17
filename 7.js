@@ -36,6 +36,6 @@ console.log('Сегодня ' + now.toLocaleString('ru-RU', options));
 
 
 let hours = now.getHours();
-let minutes = now.getHours();
+let minutes = now.getMinute();
 
-console.log(`${hours} часов ${minutes} минут`); // Все вроде работает, но выводит почему то всегда 16:16, хотя сейчас 16:59
+console.log(`${hours} часов ${minutes} минут`);
