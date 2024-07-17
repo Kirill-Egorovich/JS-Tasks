@@ -63,3 +63,26 @@ let options = {
 };
 
 forDate.innerText = now.toLocaleDateString('ru-RU', options);
+
+
+
+/* Задание 6
+Написать функцию, которая принимает на вход 3 параметра: название тега, название цвета, содержимое.
+Функция должна сформировать необходимый тег, добавить необходимый стиль с цветом и внести содержимое. 
+Вывести несколько таких сгенерированных тегов в консоль, затем отправить их на страницу. 
+*/
+
+// Не работает, выводит undefined начиная с console.log'а
+function generatedTags(tagName, color, content){
+    const tag = document.createElement(tagName);
+    tag.style.color = color;
+    tag.innerText = content;
+    
+    return;
+}
+
+const createdTag = generatedTags('h1', 'red', 'Heading'); 
+
+console.log(createdTag);
+
+document.body.append(createdTag);
