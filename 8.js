@@ -20,7 +20,7 @@ console.log('На компьютере с ОС ' + navigator.platform + ' с п�
 Вывести в консоль каждое из имен (содержимое каждого li). 
 */
 
-const listItems = document.querySelectorAll('#list li');
+const listItems = document.querySelectorAll('#list2 li');
 
 listItems.forEach(item => console.log(item.innerText));
 
@@ -218,7 +218,7 @@ const users = [
     {name:'Den', age: 43}
 ];
 
-let table = document.querySelectorAll('table');
+let table = document.querySelector('table');
 
 users.forEach(user => {
     let row = document.createElement('tr');
@@ -232,6 +232,41 @@ users.forEach(user => {
     ageCell.style.color = 'blue';
 
     row.appendChild(nameCell);
-    row.appendChild(nameAge);
+    row.appendChild(ageCell);
     table.appendChild(row);
+});
+
+
+
+/* Задание 12
+Есть верстка: https://teenscool1.notion.site...
+С помощью JavaScript:
+1) Найти в коде список ul и добавить ему класс “list”.
+2) На li через один (начиная с самого первого) установить класс “item”
+3) На все ссылки в примере установить класс “custom-link” 
+*/
+
+// 1)
+
+let search = document.querySelector('ul');
+search.classList.add('list');
+
+
+// 2) 
+
+let liList = document.querySelectorAll('.list li');
+
+liList.forEach((element, index) => {
+    if (index % 2 === 0) {
+      element.classList.add('item');
+    }
+});
+
+
+// 3)
+
+let aList = document.querySelectorAll('#twelwe a');
+
+aList.forEach(element => {
+    element.classList.add('custom-link');
 });
