@@ -110,8 +110,3 @@ function getRandomAngle () {
 button.addEventListener('mouseleave', () => {
     button.style.transform = `rotate(${getRandomAngle()}deg)`;
 });
-    const li = document.createElement('li');
-    li.textContent = string.value;
-    ulList.appendChild(li);
-    string.value = '';
-});
